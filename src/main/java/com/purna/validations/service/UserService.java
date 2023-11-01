@@ -16,7 +16,6 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-
     public User saveUser(UserRequest userRequest)
     {
        User user= User.build(0, userRequest.getName(), userRequest.getName(),
@@ -38,4 +37,5 @@ public class UserService {
                     throw  new UserNotFoundException("user not found with id:"+id);
         }
     }
+    
 }
